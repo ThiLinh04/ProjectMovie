@@ -1,0 +1,94 @@
+.container {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  &__header {
+    width: 100%;
+    height: 75px;
+    padding: 1rem;
+    position: fixed;
+
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.2s ease-in-out;
+    z-index: 999;
+
+    &--scroll {
+      height: 50px;
+      padding: 0 1rem;
+      // transform: scale(0.5);
+      transition: all ease-in-out 0.2s;
+
+      .header {
+        &__nav {
+          ul {
+            li {
+              font-size: 16px;
+              a {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        &__button {
+          ul {
+            li {
+              .dangnhap::before {
+                transition: all 0.2s ease-in-out;
+
+                content: '';
+                border-top: 2px solid gray;
+                position: absolute;
+                height: 5px;
+                width: 20px;
+                top: 25px;
+                right: 110px;
+                transform: rotateZ(-59deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .body {
+    width: 100%;
+    flex: 1;
+    margin-top: 75px;
+  }
+
+  .footer {
+    width: 100%;
+    min-height: 100px;
+  }
+}
+#progressBarContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+}
+
+#progressBar {
+  background: linear-gradient(to left, #1890fe, #eae3e3);
+  transform-origin: top left;
+  transform: scale(0, 0);
+  opacity: 0;
+
+  border-radius: 8px;
+}
+
+#progressBarContainer,
+#progressBar {
+  height: 3px;
+}

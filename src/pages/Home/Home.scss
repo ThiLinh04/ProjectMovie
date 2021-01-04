@@ -1,0 +1,51 @@
+.wrapper {
+  .section {
+    &__carousel {
+      width: 100%;
+      min-height: 100px;
+      position: relative;
+    }
+
+    &__movie {
+      margin-top: 2rem;
+
+      &__wrap {
+        width: 100%;
+        min-height: 100px;
+
+        margin-bottom: 2rem;
+
+        .wrap__v2 {
+          width: 100%;
+          min-height: 100px;
+          margin-top: 1rem;
+
+          display: flex;
+          justify-content: center;
+
+          // margin-top: 6rem;
+        }
+      }
+    }
+  }
+}
+
+@include responsive(xs) {
+  .wrapper {
+    .section {
+      &__movie {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@include responsive(lg) {
+  .wrapper {
+    .section {
+      &__movie {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

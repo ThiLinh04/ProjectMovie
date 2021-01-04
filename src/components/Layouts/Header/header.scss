@@ -1,0 +1,243 @@
+.header {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+
+    &__name {
+      font-size: 25px;
+      color: orangered;
+      font-style: italic;
+    }
+  }
+
+  &__nav {
+    height: 100%;
+    flex-grow: 1;
+
+    ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      div {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .ant-anchor-ink {
+          opacity: 0;
+        }
+        .ant-anchor-wrapper.ant-anchor-wrapper {
+          background-color: unset;
+        }
+      }
+
+      li {
+        height: 100%;
+        list-style: none;
+        text-decoration: none;
+        font-size: 18px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+        border-color: dodgerblue;
+
+        &:hover {
+          border-bottom: 1px solid dodgerblue;
+
+          .header__nav__link {
+            color: dodgerblue;
+          }
+        }
+
+        .header__nav__link {
+          color: black;
+          font-weight: 400;
+        }
+
+        .ant-anchor-link-active > .ant-anchor-link-title {
+          color: black;
+        }
+      }
+
+      li + li {
+        margin-left: 1rem;
+      }
+    }
+  }
+  &__button {
+    height: 100%;
+    width: 250px;
+
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
+    .header__button__dropdown {
+      height: 100%;
+      width: 100%;
+
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+      transition: all 0.4s ease-in;
+
+      &:hover {
+        color: dodgerblue;
+      }
+    }
+    ul {
+      height: 100%;
+      width: 100%;
+
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      li {
+        img {
+          width: 35px;
+          border-radius: 17px;
+        }
+        .item {
+          font-size: 15px;
+          color: black;
+        }
+        .dangnhap::before {
+          content: '';
+          border-top: 2px solid gray;
+          position: absolute;
+          height: 5px;
+          width: 20px;
+          top: 36px;
+          right: 110px;
+          transform: rotateZ(-59deg);
+        }
+        .dangky {
+          margin-left: 8px;
+        }
+      }
+
+      li + li {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+@include responsive(xs) {
+  .header__nav {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    flex-grow: 0;
+  }
+  .header__button {
+    opacity: 0;
+  }
+
+  .button__drawer {
+    opacity: 1;
+    width: 100%;
+    height: 50px;
+    ul {
+      padding-left: 0px;
+      display: block;
+      li {
+        text-align: center;
+        margin-top: 5px;
+        .dangky {
+          margin-left: 0px;
+        }
+      }
+      .dangnhap::before {
+        opacity: 0;
+      }
+    }
+  }
+
+  .header__logo__draw {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .menu__drawer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    div {
+      width: 100%;
+    }
+    .ul__draw {
+      .ant-anchor {
+        .nav-item {
+          padding: 0.1rem 0;
+          cursor: pointer;
+
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: #f2f2f2;
+          }
+
+          a {
+            div.ant-anchor-link {
+              padding: 0;
+              text-align: center;
+              margin: 1rem 0;
+            }
+          }
+        }
+      }
+      .ant-anchor-ink {
+        height: 0 !important;
+        display: none;
+      }
+      a {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .ant-drawer-content-wrapper {
+    width: 200px !important;
+  }
+}
+
+@include responsive(lg) {
+  .header {
+    .header__nav {
+      opacity: 1;
+      height: 100%;
+      flex-grow: 1;
+    }
+    .header__drawer {
+      opacity: 0;
+    }
+    .header__button {
+      opacity: 1;
+    }
+  }
+}

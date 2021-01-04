@@ -1,0 +1,115 @@
+.search {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  bottom: -3rem;
+  // top: -44px;
+
+  .ant-form.ant-form {
+    width: 80%;
+    height: 100%;
+
+    background-color: #fff;
+    // padding-top: 20px;
+    align-items: center;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.03);
+    border-radius: 5px;
+
+    .ant-form-item {
+      height: 100%;
+
+      .ant-form-item-control {
+        height: 100%;
+
+        .ant-form-item-control-input {
+          height: 100%;
+
+          .ant-form-item-control-input-content {
+            height: 100%;
+
+            .ant-form-item {
+              .ant-form-item-control-input-content {
+                display: flex;
+                align-items: center;
+              }
+            }
+
+            // display: flex;
+            // align-items: center;
+          }
+        }
+      }
+    }
+
+    span.ant-select-selection-search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    span.ant-select-selection-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: #000;
+    }
+  }
+
+  .ant-form-item-control-input-content {
+    padding: 5px;
+
+    button.ant-btn.ant-btn-primary {
+      width: 100%;
+      display: flex;
+      height: 40px !important;
+
+      align-items: center;
+      justify-content: center;
+      background-color: orangered;
+
+      border: orangered;
+    }
+  }
+
+  .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+    height: 40px;
+    border: none;
+    border-right: 1px solid #e6dddd;
+    border-color: #e6dddd !important;
+
+    // padding: 4%;
+    span.ant-select-selection-item {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@include responsive(xs) {
+  .search {
+    display: none;
+  }
+}
+@include responsive(md) {
+  .search {
+    display: flex;
+  }
+}
+@include responsive(lg) {
+  .search {
+    display: flex;
+  }
+}
+@include responsive(xl) {
+  .search {
+    display: flex;
+  }
+}

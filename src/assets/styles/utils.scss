@@ -1,0 +1,305 @@
+/* 
+  Margin + Padding 
+  Unit : Pixel
+*/
+$sizeMPs: 160, 120, 112, 96, 92, 80, 72, 68, 64, 56, 50, 48, 40, 36, 32, 28, 24,
+  21, 20, 18, 16, 12, 8, 6, 5, 4, 2, 0;
+
+.p {
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &-#{$sizeMP} {
+      padding: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &y-#{$sizeMP} {
+      padding-top: $val !important;
+      padding-bottom: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &x-#{$sizeMP} {
+      padding-left: $val !important;
+      padding-right: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &t-#{$sizeMP} {
+      padding-top: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &b-#{$sizeMP} {
+      padding-bottom: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &r-#{$sizeMP} {
+      padding-right: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &l-#{$sizeMP} {
+      padding-left: $val !important;
+    }
+  }
+  &b-0 {
+    padding-bottom: 0 !important;
+  }
+  &t-0 {
+    padding-top: 0 !important;
+  }
+  &l {
+    padding-left: 0 !important;
+  }
+  &r-0 {
+    padding-right: 0 !important;
+  }
+}
+
+.m {
+  &-0 {
+    margin: 0 !important;
+  }
+  &-auto {
+    margin: 0 auto !important;
+  }
+  &l-auto {
+    margin-left: auto !important;
+  }
+  &r-auto {
+    margin-right: auto !important;
+  }
+  @each $sizeMP in $sizeMPs {
+    // $val: calc-to-rem($sizeMP);
+    $val: calc-rem($sizeMP);
+    &-#{$sizeMP} {
+      margin: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &-i-#{$sizeMP} {
+      margin: -$val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &y-#{$sizeMP} {
+      margin-top: $val !important;
+      margin-bottom: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &y-i-#{$sizeMP} {
+      margin-top: -$val !important;
+      margin-bottom: -$val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &x-#{$sizeMP} {
+      margin-left: $val !important;
+      margin-right: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &x-i-#{$sizeMP} {
+      margin-left: -$val !important;
+      margin-right: -$val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &t-#{$sizeMP} {
+      margin-top: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &t-i-#{$sizeMP} {
+      margin-top: -$val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &b-#{$sizeMP} {
+      margin-bottom: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &b-i-#{$sizeMP} {
+      margin-bottom: -$val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &r-#{$sizeMP} {
+      margin-right: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &r-i-#{$sizeMP} {
+      margin-right: -$val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &l-#{$sizeMP} {
+      margin-left: $val !important;
+    }
+  }
+  @each $sizeMP in $sizeMPs {
+    $val: calc-to-rem($sizeMP);
+    &l-i-#{$sizeMP} {
+      margin-left: -$val !important;
+    }
+  }
+  &b-0 {
+    margin-bottom: 0 !important;
+  }
+  &t-0 {
+    margin-top: 0 !important;
+  }
+  &l {
+    margin-left: 0 !important;
+  }
+  &r-0 {
+    margin-right: 0 !important;
+  }
+}
+
+/* 
+  Width
+  Unit : % || absolute
+*/
+
+$percentSteps: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80,
+  85, 90, 95, 100;
+
+$absValWidths: 0, 120, 200, 240, 360, 400, 600, 640, 800, 880, 960, 1040, 1120,
+  1200, 1280, 1360, 1440, 1520, 1600;
+
+.w {
+  &-auto {
+    width: auto !important;
+  }
+
+  @each $step in $percentSteps {
+    &-#{$step} {
+      flex: 0 0 #{$step + '%'};
+      width: #{$step + '%'};
+      max-width: #{$step + '%'};
+    }
+    &-max-#{$step} {
+      max-width: #{$step + '%'};
+    }
+    &-min-#{$step} {
+      min-width: #{$step + '%'};
+    }
+  }
+}
+
+.h {
+  &-auto {
+    width: auto !important;
+  }
+
+  @each $step in $percentSteps {
+    &-#{$step} {
+      flex: 0 0 #{$step + '%'};
+      height: #{$step + '%'};
+      max-height: #{$step + '%'};
+    }
+    &-max-#{$step} {
+      max-height: #{$step + '%'};
+    }
+    &-min-#{$step} {
+      min-height: #{$step + '%'};
+    }
+  }
+}
+
+.w-abs {
+  @each $absValWidth in $absValWidths {
+    $val: calc-to-rem($absValWidth);
+    &-max-#{$absValWidth} {
+      max-width: $val !important;
+    }
+  }
+  @each $absValWidth in $absValWidths {
+    $val: calc-to-rem($absValWidth);
+    &-min-#{$absValWidth} {
+      min-width: $val !important;
+    }
+  }
+  @each $absValWidth in $absValWidths {
+    $val: calc-to-rem($absValWidth);
+    &-#{$absValWidth} {
+      max-width: 100%;
+      width: $val !important;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.hiden {
+  visibility: hidden;
+}
+
+$zVals: 1, 3000, 9000;
+
+.z {
+  @each $zVal in $zVals {
+    &-#{$zVal} {
+      z-index: $zVal !important;
+    }
+  }
+}
+
+// Responsive
+// Example: @include responsive(sm) {
+//   font-size: 14px;
+// }
+
+@mixin responsive($canvas) {
+  @if $canvas == xs {
+    @media only screen and (min-width: 320px) {
+      @content;
+    }
+  } @else if $canvas == sm {
+    @media only screen and (min-width: 576px) {
+      @content;
+    }
+  } @else if $canvas == md {
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $canvas == lg {
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+  } @else if $canvas == xl {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  } @else if $canvas == xxl {
+    @media only screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+}
